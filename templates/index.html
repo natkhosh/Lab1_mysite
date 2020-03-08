@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Safario Travel - Home</title>
+	<link rel="icon" href="{% static "img/Fevicon.png" %}" type="image/png">
+
+  <link rel="stylesheet" href="{% static "vendors/bootstrap/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/fontawesome/css/all.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/themify-icons/themify-icons.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/linericon/style.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/owl-carousel/owl.theme.default.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/owl-carousel/owl.carousel.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/flat-icon/font/flaticon.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/nice-select/nice-select.css" %}">
+
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body class="bg-shape">
+
+  <!--================ Header Menu Area start =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <a class="navbar-brand logo_h" href="/"><img src="{% static "img/logo.png" %}" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="getstarted/">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="getstarted/">Packages</a>
+
+              <li class="nav-item"><a class="nav-link" href="contact/">Contact</a></li>
+            </ul>
+
+            <div class="nav-right text-center text-lg-right py-4 py-lg-0">
+              <a class="button" href="getstarted/">Log In</a>
+
+            </div>
+
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+
+  <!--================Hero Banner Area Start =================-->
+  <section class="hero-banner magic-ball">
+    <div class="container">
+
+      <div class="row align-items-center text-center text-md-left">
+        <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
+          <h1>Travel More To Discover Yourself</h1>
+          <p>Air seed winged lights saw kind whales in sixth dont seas dron image so fish all tree meat dont there is seed winged lights saw kind whales in sixth dont seas dron image so fish all tree meat dont there </p>
+          <a class="button button-hero mt-4" href="getstarted/">Get Started</a>
+        </div>
+        <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
+          <img class="img-fluid" src="{% static "img/home/hero-img.png" %}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================Hero Banner Area End =================-->
+
+
+
+  <!--================Search Package section Start =================-->
+  <section class="section-margin">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-xl-5 align-self-center mb-5 mb-lg-0">
+          <div class="search-content">
+            <h2>Search suitable <br class="d-none d-xl-block"> and affordable plan <br class="d-none d-xl-block"> for your tour</h2>
+            <p>Make she'd moved divided air. Whose tree that replenish tone hath own upon them it multiply was blessed is lights make gathering so day dominion so creeping</p>
+            <a class="button" href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-6 offset-xl-1">
+          <div class="search-wrapper">
+            <h3>Search Package</h3>
+
+            <form class="search-form" action="." method="post">
+                 {% csrf_token %}
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="Username" placeholder="Username">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="ti-search"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <select name="category" id="category">
+                  <option value="disabled" disabled selected>Category</option>
+                  <option value="8 AM">8 AM</option>
+                  <option value="12 PM">12 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select name="tourDucation" id="tourDuration">
+                  <option value="disabled" disabled selected>Tour duration</option>
+                  <option value="8 AM">8 AM</option>
+                  <option value="12 PM">12 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="date" name="Date" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="ti-notepad"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <select name="priceRange" id="priceRange">
+                  <option value="disabled" disabled selected>Price range</option>
+                  <option value="8 AM">8 AM</option>
+                  <option value="12 PM">12 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="button border-0 mt-3" type="submit">Search Package</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================Search Package section End =================-->
+
+
+
+
+
+  <script src="{% static "vendors/jquery/jquery-3.2.1.min.js" %}"></script>
+  <script src="{% static "vendors/bootstrap/bootstrap.bundle.min.js" %}"></script>
+  <script src="{% static "vendors/owl-carousel/owl.carousel.min.js" %}"></script>
+  <script src="{% static "vendors/nice-select/jquery.nice-select.min.js" %}"></script>
+  <script src="{% static "js/jquery.ajaxchimp.min.js" %}"></script>
+  <script src="{% static "js/mail-script.js" %}"></script>
+  <script src="{% static "js/skrollr.min.js" %}"></script>
+  <script src="{% static "js/main.js" %}"></script>
+</body>
+</html>
